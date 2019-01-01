@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv=“X-UA-Compatible” content=“IE=edge” />
+    <title>UiPath KYC Solution</title>
+
+  </head>
+
+  <body>
+      
+          Starting Date:<br>
+          <input type="text" id="Starting Date"><br>
+          Starting Month:<br>
+          <input type="text" id="Starting Month"><br>
+          Starting Year:<br>
+          <input type="text" id="Starting Year"><br>
+
+	  Ending Date:<br>
+          <input type="text" id="Ending Date"><br>
+          Ending Month:<br>
+          <input type="text" id="Ending Month"><br>
+          Ending Year:<br>
+          <input type="text" id="Ending Year"><br>
+
+          <button onclick="SubmitValues()">Submit</button>
+
+
+          <script type="text/javascript">
+          function SubmitValues(){
+            var Starting_Date = document.getElementById("Starting Date").value;
+            var Starting_Month = document.getElementById("Starting Month").value;
+            var Starting_Year = document.getElementById("Starting Year").value;
+	    var Ending_Date = document.getElementById("Ending Date").value;
+            var Ending_Month = document.getElementById("Ending Month").value;
+            var Ending_Year = document.getElementById("Ending Year").value;
+            window.external.setResult(Starting_Date + "," + Starting_Month + "," + Starting_Year + "|" + Ending_Date + "," + Ending_Month + "," + Ending_Year);
+            return true;
+          }
+            
+          </script>
+  </body>
+  </html>
